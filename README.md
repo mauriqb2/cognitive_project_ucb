@@ -34,9 +34,13 @@ Para recrear el entorno de Anaconda especificado para este proyecto, asegúrate 
 1. Abre una terminal (en Windows, abre el Anaconda Prompt desde el menú de inicio).
 2. Navega al directorio que contiene tu archivo environment.yaml.
 3. Ejecuta el siguiente comando para crear un nuevo entorno de Anaconda con el nombre cognitive-services:
-<code>conda env create -f environment.yaml</code>
+
+<code>conda env create -f local_environment.yaml</code>
+
 4. Una vez que la creación del entorno se haya completado, activa el nuevo entorno con:
+
 <code>conda activate cognitive-services</code>
+
 5. Ahora puedes ejecutar el script alessandro.py dentro de este entorno activado.
 
 ## Uso

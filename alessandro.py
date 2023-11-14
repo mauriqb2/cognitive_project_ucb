@@ -31,7 +31,7 @@ def authenticate_clients():
     return text_analytics_client, content_safety_client, speech_config
 
 def get_information_about_public_figure(api_key, figure_name):
-    api_endpoint = "https://kgsearch.googleapis.com/v1/entities:search"
+    api_endpoint = os.getenv("API_GOOGLE_ENDPOINT")
     params = {
         'query': figure_name,
         'limit': 1,
@@ -136,8 +136,6 @@ def get_summarized_text(client, document):
                     print("Resumen:", sentence.text)
                     return sentence.text
     return "No se encontró un resumen adecuado."
-
-
 
 def main():
     text_analytics_client, content_safety_client, speech_config = authenticate_clients()
